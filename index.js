@@ -57,11 +57,11 @@ async function mainMail(
   }
 }
 
-app.get("/", (req, res) => {
-  res.render(index.html);
-});
+// app.get("/", (req, res) => {
+//   res.render(index.html);
+// });
 
-app.get("/contact", (req, res) => {
+app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "contact.html"));
 });
 

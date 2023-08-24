@@ -1,10 +1,37 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
 body {
     padding: 2rem;
+    line-height: 1.6;
+    font-size: 1.6rem;
+    font-family: 'Oswald', sans-serif;
+    background-color: rgb(214, 141, 6);
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
+}
+
+.contact-section {
+    background-color: white;
+}
+
+.container {
+    display: flex;
+    gap: 5rem;
+    background-color: white;
 }
 
 .form-item {
@@ -17,21 +44,24 @@ body {
 }
 
 .contact-form-text {
-    height: 2rem;
+    height: 4rem;
+    width: 30rem;
 }
 
 .contact-form-btn {
     display: block;
-    margin: 0 auto;
-    background-color: aqua;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 1rem auto;
+    background-color: rgb(214, 141, 6);
     border: none;
     border-radius: 10px;
-    padding: 1rem 2rem;
+    padding: 1.5rem 3rem;
 }
 
 textarea {
-    height: 5rem;
-    width: 20rem;
+    height: 15rem;
+    width: 30rem;
 }
 
 label {

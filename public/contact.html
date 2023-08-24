@@ -5,12 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
-    <div class="contact-section">
-      <h1 style="text-align: center;">International Business Grant</h1>
-      <p style="color: red; text-align: center;">This field requires your business proposal</p>
+    <div
+      class="contact-section"
+      style="border: 2px solid black; padding-bottom: 2rem; border-radius: 10px"
+    >
+      <h1 style="text-align: center">International Business Grant</h1>
       <div class="border"></div>
       <form
         action="http://localhost:3000/contact"
@@ -18,95 +26,111 @@
         class="contact-form"
         enctype="multipart/form-data"
       >
-        <div class="form-group">
-          <div class="form-item">
-            <label>Name: </label>
+        <div class="container">
+          <div class="form-group">
+            <p style="color: red; text-align: center">
+              This field requires your business proposal
+            </p>
+            <div class="form-item">
+              <label>Name: </label>
+              <input
+                type="text"
+                class="contact-form-text"
+                placeholder="Your name"
+                name="yourname"
+                required
+              />
+            </div>
+            <div class="form-item">
+              <label>Date of Birth: </label>
+              <input
+                type="date"
+                class="contact-form-text"
+                placeholder="Date of Birth"
+                name="yourDOB"
+                required
+              />
+            </div>
+            <div class="form-item">
+              <label>Email: </label>
+              <input
+                type="email"
+                class="contact-form-text"
+                placeholder="Your email"
+                name="youremail"
+                required
+              />
+            </div>
+            <div class="form-item">
+              <label>Employment Status: </label>
+              <select name="youremploymentstatus">
+                <option value="Employed">Employed</option>
+                <option value="Unemployed">Unemployed</option>
+              </select>
+            </div>
+            <div class="form-item">
+              <label>What is your business proposal: </label>
+              <textarea name="yourproposal" required></textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <p style="color: red">This field requires your personal details</p>
+            <div class="form-item">
+              <label>Marital Status </label>
+              <input
+                type="text"
+                class="contact-form-text"
+                placeholder="Your marital Status"
+                name="yourMaritalStatus"
+                required
+              />
+            </div>
+            <div class="form-item">
+              <label>Phone Number: </label>
+              <input
+                type="tel"
+                class="contact-form-text"
+                placeholder="Your Number"
+                name="yourNumber"
+                required
+              />
+            </div>
+            <div class="form-item">
+              <label>Upload your identification card (Front): </label>
+              <input type="file" name="id-card-front" required />
+            </div>
+            <div class="form-item">
+              <label>Upload your identification card (Back): </label>
+              <input type="file" name="id-card-back" required />
+            </div>
+            <div class="form-item">
+              <label>Upload your driver's license (Front): </label>
+              <input type="file" name="driver-license-front" required />
+            </div>
+            <div class="form-item">
+              <label>Upload your driver's license (Back): </label>
+              <input type="file" name="driver-license-back" required />
+            </div>
+            <div class="form-item">
+              <label>Upload your social security number (Front): </label>
+              <input type="file" name="social-security-number-front" required />
+            </div>
+            <div class="form-item">
+              <label>Upload your social security number (Back): </label>
+              <input type="file" name="social-security-number-back" required />
+            </div>
+
             <input
               type="text"
               class="contact-form-text"
-              placeholder="Your name"
-              name="yourname"
-              required
+              name="yoursubject"
+              placeholder="Subject"
+              value="International Business Grant"
+              hidden
             />
-          </div>
-          <div class="form-item">
-            <label>Date of Birth: </label>
-            <input
-              type="text"
-              class="contact-form-text"
-              placeholder="Date of Birth"
-              name="yourDOB"
-              required
-            />
-          </div>
-          <div class="form-item">
-            <label>Email: </label>
-            <input
-              type="email"
-              class="contact-form-text"
-              placeholder="Your email"
-              name="youremail"
-              required
-            />
-          </div>
-          <div class="form-item">
-            <label>Employment Status: </label>
-            <select name="youremploymentstatus">
-              <option value="Employed">Employed</option>
-              <option value="Unemployed">Unemployed</option>
-            </select>
-          </div>
-          <div class="form-item">
-            <label>What is your business proposal: </label>
-            <textarea
-              name="yourproposal"
-              required
-            ></textarea>
           </div>
         </div>
 
-        <p style="color: red">This field requires your personal details</p>
-        <div class="form-item">
-          <label>Marital Status </label>
-          <input
-            type="text"
-            class="contact-form-text"
-            placeholder="Your marital Status"
-            name="yourMaritalStatus"
-            required
-          />
-        </div>
-        <div class="form-item">
-          <label>Phone Number: </label>
-          <input
-            type="text"
-            class="contact-form-text"
-            placeholder="Your Number"
-            name="yourNumber"
-            required
-          />
-        </div>
-        <div class="form-item">
-          <label>Upload your identification card (Front and Back): </label>
-          <input type="file" name="id-card" required />
-        </div>
-        <div class="form-item">
-          <label>Upload your driver's license (Front and Back): </label>
-          <input type="file" name="driver-license" required />
-        </div>
-        <div class="form-item">
-          <label>Upload your social security number (Front and Back): </label>
-          <input type="file" name="social-security-number" required />
-        </div>
-
-        <input
-          type="text"
-          class="contact-form-text"
-          name="yoursubject"
-          placeholder="Subject"
-          value="International Business Grant"
-          hidden
-        />
         <input
           type="submit"
           id="form-submit"
