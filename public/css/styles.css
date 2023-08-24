@@ -47,6 +47,7 @@ body {
 .contact-form-text {
     height: 4rem;
     width: 30rem;
+    padding: .5rem;
 }
 
 .contact-form-btn {
@@ -63,6 +64,7 @@ body {
 textarea {
     height: 15rem;
     width: 30rem;
+    padding: .5rem;
 }
 
 label {
