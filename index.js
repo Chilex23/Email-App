@@ -33,7 +33,7 @@ async function mainMail(
   });
   const mailOption = {
     from: email,
-    to: process.env.GMAIL_USER2,
+    to: process.env.GMAIL_USER,
     subject: subject,
     html: `
     <p>You got a message from Email : ${email}</p>
