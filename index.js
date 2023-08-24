@@ -8,7 +8,6 @@ const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
-console.log(process.env.PASSWORD);
 
 // Configure multer for handling image uploads
 const storage = multer.memoryStorage();
