@@ -68,3 +68,12 @@ label {
     display: block;
     margin-bottom: .5rem;
 }
+
+@media screen and (max-width: 800px) {
+    .container {
+        flex-direction: column;
+        gap: 5rem;
+        background-color: white;
+    }
+  }
+  
