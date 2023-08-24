@@ -1,0 +1,40 @@
+body {
+    padding: 2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-item {
+    margin: .5rem 0;
+}
+
+.contact-form {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.contact-form-text {
+    height: 2rem;
+}
+
+.contact-form-btn {
+    display: block;
+    margin: 0 auto;
+    background-color: aqua;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+}
+
+textarea {
+    height: 5rem;
+    width: 20rem;
+}
+
+label {
+    display: block;
+    margin-bottom: .5rem;
+}
