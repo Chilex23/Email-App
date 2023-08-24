@@ -27,8 +27,8 @@ async function mainMail(
   const transporter = await nodeMail.createTransport({
     service: "gmail",
     auth: {
-      user: process.env.GMAIL_USER2,
-      pass: process.env.PASSWORD2,
+      user: process.env.GMAIL_USER,
+      pass: process.env.PASSWORD,
     },
   });
   const mailOption = {
